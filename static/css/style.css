@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-color: #1E1E1E;
+    color: white;
+    font-family: Poppins;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+}
+
+/* 100 50=50 80=20 70=30 60=40 */
+
+.leftside{
+    width: 20%;
+    /* background-color: red; */
+    height: 90vh;
+    background-color: #282828;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.leftside img{
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.upper, .library{
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.upper span:hover, .library ul li:hover{
+    background-color: #333;
+}
+
+.upper span span, .library ul li, .library h3{
+    font-weight: 600;
+}
+
+.upper span, .library ul li{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rightside{
+    width: 80%;
+    height: 90vh;
+    /* background-color: yellow; */
+    background-color: #1E1E1E;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.rightside h3{
+    margin-bottom: 20px;
+}
+
+.art{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.artists{
+    position: relative;
+    background-color: #282828;
+    border-radius: 10px;
+    overflow: hidden;
+    transition:  transform 0.3s;
+    width: 156px;
+}
+
+.artists:hover{
+    transform: scale(1.05);
+}
+
+.artists img{
+    width: 100%;
+    border-bottom: 2px solid #1FDF64;
+}
+
+.artists h4, .artists .span{
+    padding: 10px;
+    margin: 0;
+}
+
+.artists .span{
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1FDF64;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.artists:hover .play{
+    display: flex;
+}
+
+
+/* album style */
+
+#album{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.songplayers{
+    position: relative;
+    background-color: #282828;
+    border-radius: 10px;
+    overflow: hidden;
+    transition:  transform 0.3s;
+    width: 156px;
+}
+
+.songplayers:hover{
+    transform: scale(1.05);
+}
+
+.songplayers img{
+    width: 100%;
+    border-bottom: 2px solid #1FDF64;
+}
+
+.songplayers h4, .songplayers .span{
+    padding: 10px;
+    margin: 0;
+}
+
+.songplayers .span{
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+
+.play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1FDF64;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.muiscplayer:hover .play{
+    display: flex;
+}
+
+
+.playbutton{
+    color: black;
+    font-size: 35px;
+}
+
+/* fade in animation work */
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.lowerside{
+    /* background-color: green; */
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1E1E1E;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+}
+
+.controls button , .controls input[type="range"], .controls span{
+    margin: 0 10px;
+}
+
+.controls button{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.controls input[type="range"]{
+    flex-grow: 1;
+}
+
+#seekBar{
+    width: 300px;
+}
+
+#volumeBar{
+    width: 100px;
+}
+
+#currentTime, #duration{
+    width: 100px;
+}
+
+
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        margin-top: -25px;
+    }
+
+    .leftside{
+        display: none;
+    }
+
+    .rightside{
+        width: 100%;
+    }
+
+    .controls{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    margin-top: -47px;
+    }
+
+    #seekBar{
+        width: calc(100% -150px);
+    }
+
+    #volumeBar{
+        width: 100px;
+    }
+
+    #volumeBtn{
+       order: -1;
+    }
+
+    .album{
+       width: 100%;
+    }
+
+    .artists{
+        width: calc(50% -20px);
+    }
+}

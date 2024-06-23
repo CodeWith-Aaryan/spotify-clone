@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Spotify</title>
+</head>
+<body>
+    <div class="container">
+        <div class="leftside">
+            <img src="/static/img/spotify-logo.png" alt="">
+            <div class="upper">
+                <span><span class="material-symbols-outlined">home</span>Home</span>
+                <span><span class="material-symbols-outlined">search</span>Search</span>
+            </div>
+            <div class="library">
+                <h3>Library</h3>
+                <ul>
+                    <li>Playlists</li>
+                    <li>Artists</li>
+                    <li>Albums</li>
+                </ul>
+                <ul id="songList"></ul>
+            </div>
+        </div>
+        <div class="rightside">
+            <h3>Popular Artists</h3>
+            <div class="art">
+                <div class="artists">
+                    <img src="/static/img/artists/1.png" alt="">
+                    <h4>Pritam</h4>
+                    <span class="span">Artists</span>
+                    <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                </div>
+                <div class="artists">
+                    <img src="/static/img/artists/2.png" alt="">
+                    <h4>Arjit Singh</h4>
+                    <span class="span">Artists</span>
+                    <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                </div>
+                <div class="artists">
+                    <img src="/static/img/artists/3.png" alt="">
+                    <h4>A.R Rahman</h4>
+                    <span class="span">Artists</span>
+                    <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                </div>
+                <div class="artists">
+                    <img src="/static/img/artists/4.png" alt="">
+                    <h4>Anirudh Ravichandar</h4>
+                    <span class="span">Artists</span>
+                    <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                </div>
+                <div class="artists">
+                    <img src="/static/img/artists/5.png" alt="">
+                    <h4>Vishal Mishra</h4>
+                    <span class="span">Artists</span>
+                    <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                </div>
+            </div>
+            <h3>Popular Album</h3>
+            <div class="album">
+                <!-- <div class="art">
+                    <div class="artists">
+                        <img src="/static/songs/img/3 idiot.jpg" alt="">
+                        <h4>Pritam</h4>
+                        <span class="span">Artists</span>
+                        <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                    </div>
+                    <div class="artists">
+                        <img src="/static/songs/img/doremon.jpg" alt="">
+                        <h4>Arjit Singh</h4>
+                        <span class="span">Artists</span>
+                        <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                    </div>
+                    <div class="artists">
+                        <img src="/static/songs/img/mera safar.jpg" alt="">
+                        <h4>A.R Rahman</h4>
+                        <span class="span">Artists</span>
+                        <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                    </div>
+                    <div class="artists">
+                        <img src="/static/songs/img/o maahiu.jpg" alt="">
+                        <h4>Anirudh Ravichandar</h4>
+                        <span class="span">Artists</span>
+                        <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                    </div>
+                    <div class="artists">
+                        <img src="/static/songs/img/maan.jpg" alt="">
+                        <h4>Vishal Mishra</h4>
+                        <span class="span">Artists</span>
+                        <div class="play"><span class="material-symbols-outlined playbutton">play_arrow</span></div>
+                    </div>
+                </div> -->
+                <div id="album"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="lowerside">
+        <audio id="audioPlayer" src=""></audio>
+        <div class="controls">
+            <button id="prevBtn"><span class="material-symbols-outlined">skip_previous</span></button>
+            <button id="playPauseBtn"><span class="material-symbols-outlined">play_arrow</span></button>
+            <button id="nextBtn"><span class="material-symbols-outlined">skip_next</span></button>
+            <input type="range" id="seekBar" value="0" max="100">
+            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+            <button id="shuffleBtn"><span class="material-symbols-outlined">shuffle</span></button>
+            <button id="repeatBtn"><span class="material-symbols-outlined">repeat</span></button>
+            <button id="volumeBtn"><span class="material-symbols-outlined">volume_up</span></button>
+            <input type="range" id="volumeBar" min="0" max="1" step="0.1" value="1">
+            <button id="fullscreenBtn"><span class="material-symbols-outlined">fullscreen</span></button>
+        </div>
+    </div>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
